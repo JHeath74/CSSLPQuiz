@@ -49,7 +49,7 @@ while guess != 0:
 	print("Question is in Red,\n"
 		  "  answers to be typed are in Green,\n"
 		  " incorrect responses are in Yellow\n")
-	guess = input("Answer the following question \n \u001b[31m" + CSSLPInfo + "\033[39m:\n"
+	guess = input("Answer the following question \n \u001b[31m" + CSSLPInfo + "\033[39m:\n\n"
 				  + "Option 1: \u001b[32m" + str(newvalue) + "\033[39m\n"
 				  + "Option 2: \u001b[32m" + str(newvalue2) + "\033[39m\n"
 				  + "Option 3: \u001b[32m" + str(newvalue3) + "\033[39m\n"

@@ -34,12 +34,12 @@ def final_score(playername, portpoints):
 
 	final_score_award.write(awardtext)
 
-	final_score_award.write("\n")
+	final_score_award.write("\nCorrect Answers")
 
 	for line in CorrectAnswersCSSLPDict:
 		final_score_award.write("%s\n" % line)
 
-	final_score_award.write("\n")
+	final_score_award.write("\n\nIncorrectAnswers\n")
 
 	for line in IncorrectAnswersCSSLPDict:
 		final_score_award.write("%s\n" % line)
