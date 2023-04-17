@@ -46,12 +46,14 @@ while guess != 0:
 		newvalue4 = random.choice(list(shuffledvalues.keys()))
 
 	shuffledvalues.clear()
-	print("Question is in Red,  answers to be typed are in Green")
-	guess = input("Answer the following question \n \u001b[31m" + CSSLPInfo + ":\n"
-				  + "Option 1: \u001b[32m" + str(newvalue) + "\n"
-				  + "Option 2: \u001b[32m" + str(newvalue2) + "\n"
-				  + "Option 3: \u001b[32m" + str(newvalue3) + "\n"
-				  + "Option 4: \u001b[32m" + str(newvalue4) + "\n"
+	print("Question is in Red,\n"
+		  "  answers to be typed are in Green,\n"
+		  " incorrect responses are in Yellow\n")
+	guess = input("Answer the following question \n \u001b[31m" + CSSLPInfo + "\033[39m:\n"
+				  + "Option 1: \u001b[32m" + str(newvalue) + "\033[39m\n"
+				  + "Option 2: \u001b[32m" + str(newvalue2) + "\033[39m\n"
+				  + "Option 3: \u001b[32m" + str(newvalue3) + "\033[39m\n"
+				  + "Option 4: \u001b[32m" + str(newvalue4) + "\033[39m\n"
 				  + "Type 0 to exit\n"
 				  + "\nWhich open is your guess?\n"
 				  + "Answer is: ")
@@ -76,7 +78,7 @@ while guess != 0:
 
 	else:
 		print("\nYour choice was not correct.\n"
-			  "The correct answer is " + value)
+			  "The correct answer is \033[1;33m" + value + "\033[39m")
 		CSSLPpoints -= 1
 		incorrect += 1
 		CSSLPQuizAwards.IncorrectAnswersCSSLPDict[guess] = CSSLPInfo
