@@ -4,7 +4,7 @@ import CSSLPQuizAwards
 import CSSLPQuizQuestionsDict
 
 guess = -1
-portpoints = 0
+CSSLPpoints = 0
 correct = 0
 incorrect = 0
 newvalue = 0
@@ -18,16 +18,16 @@ playername = input("Please Enter your name and press the enter key: ")
 
 while guess != 0:
 
-	print("\nPort Quiz")
-	print("You'll be given a program and have to guess the port number\n")
+	print("\nCSSLP Quiz")
+	print("You'll be given a question,  and must choose the best answer\n")
 
-	portinfo = random.choice(list(CSSLPQuizQuestionsDict.portDict.values()))
-	dictvalue = {i for i in CSSLPQuizQuestionsDict.portDict if CSSLPQuizQuestionsDict.portDict[i] == portinfo}
+	CSSLPInfo = random.choice(list(CSSLPQuizQuestionsDict.CSSLPdict.values()))
+	dictvalue = {i for i in CSSLPQuizQuestionsDict.CSSLPdict if CSSLPQuizQuestionsDict.CSSLPdict[i] == CSSLPInfo}
 
 	value = str(dictvalue).replace("{", "").replace("}", "").replace("'", "")
-	value2 = random.choice(list(CSSLPQuizQuestionsDict.portDict.keys()))
-	value3 = random.choice(list(CSSLPQuizQuestionsDict.portDict.keys()))
-	value4 = random.choice(list(CSSLPQuizQuestionsDict.portDict.keys()))
+	value2 = random.choice(list(CSSLPQuizQuestionsDict.CSSLPdict.keys()))
+	value3 = random.choice(list(CSSLPQuizQuestionsDict.CSSLPdict.keys()))
+	value4 = random.choice(list(CSSLPQuizQuestionsDict.CSSLPdict.keys()))
 
 	shuffledvalues[value] = value
 	shuffledvalues[value2] = value2
@@ -46,29 +46,29 @@ while guess != 0:
 		newvalue4 = random.choice(list(shuffledvalues.keys()))
 
 	shuffledvalues.clear()
-
-	guess = input("Which of the following ports is used by " + portinfo + ":\n"
-				  + "Port: " + str(newvalue) + "\n"
-				  + "Port: " + str(newvalue2) + "\n"
-				  + "Port: " + str(newvalue3) + "\n"
-				  + "Port: " + str(newvalue4) + "\n"
+	print("Question is in Red,  answers to be typed are in Green")
+	guess = input("Answer the following question \n \u001b[31m" + CSSLPInfo + ":\n"
+				  + "Option 1: \u001b[32m" + str(newvalue) + "\n"
+				  + "Option 2: \u001b[32m" + str(newvalue2) + "\n"
+				  + "Option 3: \u001b[32m" + str(newvalue3) + "\n"
+				  + "Option 4: \u001b[32m" + str(newvalue4) + "\n"
 				  + "Type 0 to exit\n"
-				  + "\nWhich port is your guess?\n"
+				  + "\nWhich open is your guess?\n"
 				  + "Answer is: ")
 
 	if guess == "0":
-		CSSLPQuizAwards.CorrectIncorrectResponses(playername, portpoints)
+		CSSLPQuizAwards.CorrectIncorrectResponses(playername, CSSLPpoints)
 		break
 
 	elif guess == value:
 		print("Congratulations, your right!")
-		portpoints += 1
+		CSSLPpoints += 1
 		correct += 1
-		print("Your Current Score: " + str(portpoints))
-		CSSLPQuizAwards.CorrectAnswersPortDict[guess] = portinfo
+		print("Your Current Score: " + str(CSSLPpoints))
+		CSSLPQuizAwards.CorrectAnswersCSSLPDict[guess] = CSSLPInfo
 
-		for i in CSSLPQuizAwards.CorrectAnswersPortDict:
-			print("Values: " + i + "Port Info: ", portinfo)
+		for i in CSSLPQuizAwards.CorrectAnswersCSSLPDict:
+			print("Values: " + i + "Port Info: ", CSSLPInfo)
 
 		shuffledvalues.clear()
 		print("______________________________________")
@@ -77,20 +77,20 @@ while guess != 0:
 	else:
 		print("\nYour choice was not correct.\n"
 			  "The correct answer is " + value)
-		portpoints -= 1
+		CSSLPpoints -= 1
 		incorrect += 1
-		CSSLPQuizAwards.IncorrectAnswersPortDict[guess] = portinfo
+		CSSLPQuizAwards.IncorrectAnswersCSSLPDict[guess] = CSSLPInfo
 
-		for i in CSSLPQuizAwards.IncorrectAnswersPortDict:
+		for i in CSSLPQuizAwards.IncorrectAnswersCSSLPDict:
 			print("Values: " + i +
-				"Port Info: ", portinfo)
+				  "CSSLP Info ", CSSLPInfo)
 
 		shuffledvalues.clear()
-		print("Your Current Score: " + str(portpoints))
+		print("Your Current Score: " + str(CSSLPpoints))
 		print("______________________________________")
 		print("______________________________________")
 
 	print("Quiz Over")
-	print("Total Score: " + str(portpoints))
+	print("Total Score: " + str(CSSLPpoints))
 	print("Number of correct guesses: " + str(correct))
 	print("Number of incorrect guesses: " + str(incorrect))

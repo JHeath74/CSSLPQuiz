@@ -1,5 +1,5 @@
-CorrectAnswersPortDict = {}
-IncorrectAnswersPortDict = {}
+CorrectAnswersCSSLPDict = {}
+IncorrectAnswersCSSLPDict = {}
 
 
 def CorrectIncorrectResponses(playername, portpoints):
@@ -14,11 +14,11 @@ def CorrectIncorrectResponses(playername, portpoints):
 			final_score(playername, portpoints)
 			break
 		if response == "1":
-			for CorrectAnswers in CorrectAnswersPortDict:
+			for CorrectAnswers in CorrectAnswersCSSLPDict:
 				print(CorrectAnswers)
 
 		if response == "2":
-			for IncorrectAnswers in IncorrectAnswersPortDict:
+			for IncorrectAnswers in IncorrectAnswersCSSLPDict:
 				print(IncorrectAnswers)
 
 
@@ -36,11 +36,11 @@ def final_score(playername, portpoints):
 
 	final_score_award.write("\n")
 
-	for line in CorrectAnswersPortDict:
+	for line in CorrectAnswersCSSLPDict:
 		final_score_award.write("%s\n" % line)
 
 	final_score_award.write("\n")
 
-	for line in IncorrectAnswersPortDict:
+	for line in IncorrectAnswersCSSLPDict:
 		final_score_award.write("%s\n" % line)
 

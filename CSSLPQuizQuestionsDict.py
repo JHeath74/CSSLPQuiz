@@ -1,4 +1,4 @@
-thisdict = {
+CSSLPdict = {
   "Previous errors in the code base(s)": "What is the most important source of error information to employ when checking code?",
   "A security design that cannot be bypassed or circumvented": "Complete mediation is an approach to security that includes what?",
   "Code walk-throughs": "Which testing methodology can improve maintainability of the code base?",
