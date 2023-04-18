@@ -1,5 +1,6 @@
 CSSLPdict = {
-  "Previous errors in the code base(s)": "What is the most important source of error information to employ when checking code?",
+  "Previous errors in the code base(s)": "What is the most important source of error information to\n "
+                                         "employ when checking code?",
   "A security design that cannot be bypassed or circumvented": "Complete mediation is an approach to security that includes what?",
   "Code walk-throughs": "Which testing methodology can improve maintainability of the code base?",
   "Least privilege":"What is the fundamental approach to security in which an object has only the necessary rights\n"
@@ -30,11 +31,23 @@ CSSLPdict = {
   "You work as a project manager for a company. The company has started a new security software project.\n"
   " The software configuration management will be used throughout the lifecycle of the project. You are tasked \n"
   "to modify the functional features and the basic logic of the software and then make them compatible to the \n"
-  "initial design of the project. Which of the following procedures of the configuration management will you follow to accomplish the task?":"You work as a project manager for a company. The company has started a new security software project. The software configuration management will be used throughout the lifecycle of the project. You are tasked to modify the functional features and the basic logic of the software and then make them compatible to the initial design of the project. Which of the following procedures of the configuration management will you follow to accomplish the task?",
-  "Local Computing Environments":"Which of the following areas of information system, as separated by Information Assurance Framework, is a collection of local computing devices, regardless of physical location, that are interconnected via local area networks (LANs) and governed by a single security policy?",
+  "initial design of the project. Which of the following procedures of the configuration management\n "
+  "will you follow to accomplish the task?":"You work as a project manager for a company. "
+                                            "The company has started a new security software project.\n"
+                                            " The software configuration management will be used throughout\n"
+                                            " the lifecycle of the project. You are tasked to modify the\n"
+                                            " functional features and the basic logic of the software and\n"
+                                            " then make them compatible to the initial design of the project.\n "
+                                            "Which of the following procedures of the configuration \n"
+                                            "management will you follow to accomplish the task?\n",
+  "Local Computing Environments":"Which of the following areas of information system, as separated by \n"
+                                 "Information Assurance Framework, is a collection of local computing devices,\n"
+                                 " regardless of physical location, that are interconnected via local area\n "
+                                 "networks (LANs) and governed by a single security policy?",
   "Snort":"Which of the following is a signature-based intrusion detection system (IDS) ?",
   "It ensures reliable and timely access to resources.":"Which of the following statements about the \n"
-                                                        "availability concept of Information security management is true?",
+                                                        "availability concept of Information security management\n "
+                                                        "is true?",
   "NIST Special Publication 800-37":" You work as a security engineer for BlueWell Inc. Which of the following\n"
                                     " documents will you use as a guide for the security certification and \n"
                                     "accreditation of Federal Information Systems? ",
