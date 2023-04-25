@@ -9,17 +9,19 @@ def CorrectIncorrectResponses(playername, portpoints):
 		response = input("Do you wish to see the correct or incorrect answers?\n"
 						+ "1 for Correct Answers\n"
 						+ "2 for Incorrect Answers\n"
-						+ "0 for Exit")
+						+ "0 for Exit\n")
 		if response == "0":
 			final_score(playername, portpoints)
 			break
 		if response == "1":
-			for CorrectAnswers in CorrectAnswersCSSLPDict:
-				print(CorrectAnswers)
+			print("Correct Answers\n")
+			for key, value in CorrectAnswersCSSLPDict.items():
+				print("Question:\n " + value + "Correct Answer: " + key + "\n")
 
 		if response == "2":
-			for IncorrectAnswers in IncorrectAnswersCSSLPDict:
-				print(IncorrectAnswers)
+			print("Incorrect Answers\n")
+			for key, value in IncorrectAnswersCSSLPDict.items():
+				print("Question: " + value + "\nIncorrect Answer: " + key + "\n")
 
 
 def final_score(playername, portpoints):
@@ -37,7 +39,7 @@ def final_score(playername, portpoints):
 	final_score_award.write("\nCorrect Answers\n")
 
 	for line in CorrectAnswersCSSLPDict:
-		final_score_award.write("%s\n" % line)
+		final_score_award.write("CorrectAnswers: %s\n" % line)
 
 	final_score_award.write("\n\nIncorrectAnswers\n")
 

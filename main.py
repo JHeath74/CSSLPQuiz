@@ -47,8 +47,8 @@ while guess != 0:
 
 	shuffledvalues.clear()
 	print("Question is in Red,\n"
-		  "  answers to be typed are in Green,\n"
-		  " incorrect responses are in Yellow\n")
+		  "  Choose option \u001b[32m 1 \033[39m" + ",\u001b[32m 2, \033[39m" + "\u001b[32m 3, \033[39m" +
+		  "or \u001b[32m 4 \033[39m" + "for your answer\n incorrect responses are in Yellow\n")
 	guess = input("Answer the following question \n \u001b[31m" + CSSLPInfo + "\033[39m:\n\n"
 				  + "Option 1: \u001b[32m" + str(newvalue) + "\033[39m\n"
 				  + "Option 2: \u001b[32m" + str(newvalue2) + "\033[39m\n"
@@ -57,40 +57,119 @@ while guess != 0:
 				  + "Type 0 to exit\n"
 				  + "\nWhich open is your guess?\n"
 				  + "Answer is: ")
+	guess.lower()
+	value.lower()
 
 	if guess == "0":
 		CSSLPQuizAwards.CorrectIncorrectResponses(playername, CSSLPpoints)
 		break
 
-	elif guess == value:
-		print("Congratulations, your right!")
-		CSSLPpoints += 1
-		correct += 1
-		print("Your Current Score: " + str(CSSLPpoints))
-		CSSLPQuizAwards.CorrectAnswersCSSLPDict[guess] = CSSLPInfo
+	if guess == "1":
+		if newvalue == value:
+			print("Congratulations, your right!")
+			CSSLPpoints += 1
+			correct += 1
+			print("Your Current Score: " + str(CSSLPpoints))
+			CSSLPQuizAwards.CorrectAnswersCSSLPDict[newvalue] = CSSLPInfo
 
-		for i in CSSLPQuizAwards.CorrectAnswersCSSLPDict:
-			print("Values: " + i + "Port Info: ", CSSLPInfo)
+			for i in CSSLPQuizAwards.CorrectAnswersCSSLPDict:
+				print("Values: " + i + "Port Info: ", CSSLPInfo)
 
-		shuffledvalues.clear()
-		print("______________________________________")
-		print("______________________________________")
+			shuffledvalues.clear()
+			print("______________________________________")
+			print("______________________________________")
 
-	else:
-		print("\nYour choice was not correct.\n"
-			  "The correct answer is \033[1;33m" + value + "\033[39m")
-		CSSLPpoints -= 1
-		incorrect += 1
-		CSSLPQuizAwards.IncorrectAnswersCSSLPDict[guess] = CSSLPInfo
+		else:
+			print("\nYour choice was not correct.\n"
+				  "The correct answer is \033[1;33m" + value + "\033[39m")
+			CSSLPpoints -= 1
+			incorrect += 1
+			CSSLPQuizAwards.IncorrectAnswersCSSLPDict[newvalue] = CSSLPInfo
 
-		for i in CSSLPQuizAwards.IncorrectAnswersCSSLPDict:
-			print("Values: " + i +
-				  "CSSLP Info ", CSSLPInfo)
+			shuffledvalues.clear()
+			print("Your Current Score: " + str(CSSLPpoints))
+			print("______________________________________")
+			print("______________________________________")
 
-		shuffledvalues.clear()
-		print("Your Current Score: " + str(CSSLPpoints))
-		print("______________________________________")
-		print("______________________________________")
+	if guess == "2":
+		if newvalue2 == value:
+			print("Congratulations, your right!")
+			CSSLPpoints += 1
+			correct += 1
+			print("Your Current Score: " + str(CSSLPpoints))
+			CSSLPQuizAwards.CorrectAnswersCSSLPDict[newvalue2] = CSSLPInfo
+
+			for i in CSSLPQuizAwards.CorrectAnswersCSSLPDict:
+				print("Values: " + i + "Port Info: ", CSSLPInfo)
+
+			shuffledvalues.clear()
+			print("______________________________________")
+			print("______________________________________")
+
+		else:
+			print("\nYour choice was not correct.\n"
+				  "The correct answer is \033[1;33m" + value + "\033[39m")
+			CSSLPpoints -= 1
+			incorrect += 1
+			CSSLPQuizAwards.IncorrectAnswersCSSLPDict[newvalue2] = CSSLPInfo
+
+			shuffledvalues.clear()
+			print("Your Current Score: " + str(CSSLPpoints))
+			print("______________________________________")
+			print("______________________________________")
+
+	if guess == "3":
+		if newvalue3 == value:
+			print("Congratulations, your right!")
+			CSSLPpoints += 1
+			correct += 1
+			print("Your Current Score: " + str(CSSLPpoints))
+			CSSLPQuizAwards.CorrectAnswersCSSLPDict[newvalue3] = CSSLPInfo
+
+			for i in CSSLPQuizAwards.CorrectAnswersCSSLPDict:
+				print("Values: " + i + "Port Info: ", CSSLPInfo)
+
+			shuffledvalues.clear()
+			print("______________________________________")
+			print("______________________________________")
+
+		else:
+			print("\nYour choice was not correct.\n"
+				  "The correct answer is \033[1;33m" + value + "\033[39m")
+			CSSLPpoints -= 1
+			incorrect += 1
+			CSSLPQuizAwards.IncorrectAnswersCSSLPDict[newvalue3] = CSSLPInfo
+
+			shuffledvalues.clear()
+			print("Your Current Score: " + str(CSSLPpoints))
+			print("______________________________________")
+			print("______________________________________")
+
+	if guess == "4":
+		if newvalue4 == value:
+			print("Congratulations, your right!")
+			CSSLPpoints += 1
+			correct += 1
+			print("Your Current Score: " + str(CSSLPpoints))
+			CSSLPQuizAwards.CorrectAnswersCSSLPDict[newvalue4] = CSSLPInfo
+
+			for i in CSSLPQuizAwards.CorrectAnswersCSSLPDict:
+				print("Values: " + i + "Port Info: ", CSSLPInfo)
+
+			shuffledvalues.clear()
+			print("______________________________________")
+			print("______________________________________")
+		else:
+			print("\nYour choice was not correct.\n"
+				  "The correct answer is \033[1;33m" + value + "\033[39m")
+			CSSLPpoints -= 1
+			incorrect += 1
+			CSSLPQuizAwards.IncorrectAnswersCSSLPDict[newvalue4] = CSSLPInfo
+
+			shuffledvalues.clear()
+			print("Your Current Score: " + str(CSSLPpoints))
+			print("______________________________________")
+			print("______________________________________")
 
 	print("Quiz Over")
 	print("Total Score: " + str(CSSLPpoints))
